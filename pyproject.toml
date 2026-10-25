@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scoreprop"
+version = "0.1.0"
+description = "ScoreProp: complete score decomposition (input + per-layer constant contributions) for neural networks"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Jordi de la Torre" }]
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1"]
+keywords = ["interpretability", "explainability", "attribution", "pytorch"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+vision = ["torchvision", "timm"]
+dev = ["pytest", "torchvision"]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/1712.08107"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
