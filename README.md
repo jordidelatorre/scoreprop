@@ -1,8 +1,12 @@
 # scoreprop
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23641811.svg)](https://doi.org/10.5281/zenodo.23641811)
+
 **ScoreProp: receptive-field score decomposition for neural networks.** ScoreProp (de la Torre, Valls & Puig, 2017) splits a network's output score into an input term and one constant term per layer, and maps every term back to the image. For piecewise-linear networks (conv / linear / batch norm, ReLU, pooling, residual additions) the split is exact by construction. With `nodes="taylor"` it also applies to other differentiable networks (MobileNet-V2, EfficientNet-B0, ConvNeXt-T, ViT-B/16), with relative residuals ≤ 3e-6.
 
 The `scoreprop` package is a general PyTorch implementation of the score-propagation method of the Neurocomputing paper and PhD thesis below. It works for any supported PyTorch network.
+
+The software is archived on Zenodo: [doi:10.5281/zenodo.23641811](https://doi.org/10.5281/zenodo.23641811).
 
 ## Origin and credit
 
@@ -139,7 +143,9 @@ plt.colorbar(); plt.axis("off"); plt.show()
 
 ## Citation
 
-Please refer to the method as **ScoreProp** (receptive-field score decomposition) and cite:
+Please refer to the method as **ScoreProp** (receptive-field score decomposition). If you use the method, cite the paper (and the thesis, if relevant). If you use this package, please also cite the software record on Zenodo ([doi:10.5281/zenodo.23641811](https://doi.org/10.5281/zenodo.23641811)).
+
+The method:
 
 ```bibtex
 @article{delatorre2020interpretable,
@@ -158,6 +164,19 @@ Please refer to the method as **ScoreProp** (receptive-field score decomposition
   author = {de la Torre, Jordi},
   school = {Universitat Rovira i Virgili},
   year   = {2019}
+}
+```
+
+The software:
+
+```bibtex
+@software{delatorre2026scoreprop,
+  title     = {ScoreProp: receptive-field score decomposition for neural networks},
+  author    = {de la Torre, Jordi},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23641811},
+  url       = {https://doi.org/10.5281/zenodo.23641811}
 }
 ```
 
